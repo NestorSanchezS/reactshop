@@ -2,6 +2,9 @@ import React, { useContext, useState } from "react";
 import { Menu } from "./Menu";
 import { AppContext } from "../context/AppContext";
 import { MyOrder } from "../containers/MyOrder";
+import logo_yard_sale from "../assets/logos/logo_yard_sale.svg";
+import icon_shopping_cart from "../assets/icons/icon_shopping_cart.svg";
+import icon_menu from "../assets/icons/icon_menu.svg";
 
 import "../Styles/Header.scss";
 
@@ -16,9 +19,9 @@ export const Header = () => {
 
   return (
     <nav>
-      <img src="icons/icon_menu.svg" alt="menu" className="menu" />
+      <img src={icon_menu} alt="menu" className="menu" />
       <div className="navbar-left">
-        <img src="logos/logo_yard_sale.svg" alt="logo" className="nav-logo" />
+        <img src={logo_yard_sale} alt="logo" className="nav-logo" />
         <ul>
           <li>
             <a href="/">All</a>
@@ -49,7 +52,7 @@ export const Header = () => {
             className="navbar-shopping-cart"
             onClick={() => setToggleOrders(!toggleOrders)}
           >
-            <img src="icons/icon_shopping_cart.svg" alt="shopping cart" />
+            <img src={icon_shopping_cart} alt="shopping cart" />
             {state.cart.length > 0 ? <div>{state.cart.length}</div> : null}
           </li>
         </ul>

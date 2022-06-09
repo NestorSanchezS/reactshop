@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { OrderItem } from "../components/OrderItem";
 import { AppContext } from "../context/AppContext";
+import flechita from "../assets/icons/flechita.svg";
 import "../Styles/MyOrder.scss";
 
 export const MyOrder = () => {
@@ -16,7 +17,7 @@ export const MyOrder = () => {
   return (
     <aside className="MyOrder">
       <div className="title-container">
-        <img src="./icons/flechita.svg" alt="arrow" />
+        <img src={flechita} alt="arrow" />
         <p className="title">My order</p>
       </div>
       <div className="my-order-content">

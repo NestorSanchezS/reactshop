@@ -1,4 +1,6 @@
 import React, { useRef } from "react";
+import { Link } from "react-router-dom";
+import logo_yard_sale from "../assets/logos/logo_yard_sale.svg";
 import "../Styles/Login.scss";
 
 export const Login = () => {
@@ -17,7 +19,7 @@ export const Login = () => {
   return (
     <div className="Login">
       <div className="Login-container">
-        <img src="./logos/logo_yard_sale.svg" alt="logo" className="logo" />
+        <img src={logo_yard_sale} alt="logo" className="logo" />
         <form action="/" className="form" ref={form}>
           <label htmlFor="email" className="label">
             Email address
@@ -45,7 +47,11 @@ export const Login = () => {
           </button>
           <a href="/">Forgot my password</a>
         </form>
-        <button className="secondary-button signup-button">Sign up</button>
+        <button className="secondary-button signup-button">
+          <Link to="/signup" className="secondary__link">
+            Sign up
+          </Link>
+        </button>
       </div>
     </div>
   );
